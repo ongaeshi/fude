@@ -285,14 +285,30 @@ module Raylib
       o
     end
   end
-      
+
+  # Camera system modes
+  CAMERA_CUSTOM       = 0
+  CAMERA_FREE         = 1
+  CAMERA_ORBITAL      = 2 
+  CAMERA_FIRST_PERSON = 3
+  CAMERA_THIRD_PERSON = 4
+
+  # Camera projection modes
+  CAMERA_PERSPECTIVE = 0
+  CAMERA_ORTHOGRAPHIC = 1
+     
+  # COlor
   WHITE     = Color.init(255, 255, 255, 255)
   RAYWHITE  = Color.init(245, 245, 245, 255)
   LIGHTGRAY = Color.init(200, 200, 200, 255)
   DARKGRAY  = Color.init(80, 80, 80, 255)
   RED       = Color.init(230, 41, 55, 255)
   MAROON    = Color.init(190, 33, 55, 255)
+  SKYBLUE   = Color.init(102, 191, 255, 255)
+  BLUE      = Color.init(0, 121, 241, 255)
+  BLACK     = Color.init(0, 0, 0, 255)
 
+  KEY_Z               = 90
   KEY_RIGHT           = 262
   KEY_LEFT            = 263
   KEY_DOWN            = 264
