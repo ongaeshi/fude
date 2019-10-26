@@ -21,14 +21,14 @@ window(SCREEN_WIDTH, SCREEN_HEIGHT, "raylib [core] example - 3d camera free") do
 
   set_target_fps(60);                   # Set our game to run at 60 frames-per-second
 
-	until window_should_close do
+  until window_should_close do
     # Update
     update_camera(camera)                 # Update camera
 
     camera.target = Vector3.init(0, 0, 0) if is_key_down(KEY_Z)
 
-		# Draw
-		draw do
+    # Draw
+    draw do
       clear_background(RAYWHITE)
       
       mode3d(camera) do
@@ -47,6 +47,6 @@ window(SCREEN_WIDTH, SCREEN_HEIGHT, "raylib [core] example - 3d camera free") do
       draw_text("- Alt + Mouse Wheel Pressed to Rotate", 40, 80, 10, DARKGRAY)
       draw_text("- Alt + Ctrl + Mouse Wheel Pressed for Smooth Zoom", 40, 100, 10, DARKGRAY)
       draw_text("- Z to zoom to (0, 0, 0)", 40, 120, 10, DARKGRAY)
-		end
-	end
+    end
+  end
 end
