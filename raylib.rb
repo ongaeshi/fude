@@ -297,18 +297,34 @@ module Raylib
   CAMERA_PERSPECTIVE = 0
   CAMERA_ORTHOGRAPHIC = 1
      
-  # COlor
-  WHITE     = Color.init(255, 255, 255, 255)
-  RAYWHITE  = Color.init(245, 245, 245, 255)
-  LIGHTGRAY = Color.init(200, 200, 200, 255)
-  DARKGRAY  = Color.init(80, 80, 80, 255)
-  GOLD      = Color.init(255, 203, 0, 255)
-  RED       = Color.init(230, 41, 55, 255)
-  MAROON    = Color.init(190, 33, 55, 255)
-  LIME      = Color.init(0, 158, 47, 255)
-  SKYBLUE   = Color.init(102, 191, 255, 255)
-  BLUE      = Color.init(0, 121, 241, 255)
-  BLACK     = Color.init(0, 0, 0, 255)
+  # Color
+  LIGHTGRAY  = Color.init(200, 200, 200, 255)  # Light Gray
+  GRAY       = Color.init(130, 130, 130, 255)  # Gray
+  DARKGRAY   = Color.init(80, 80, 80, 255)     # Dark Gray
+  YELLOW     = Color.init(253, 249, 0, 255)    # Yellow
+  GOLD       = Color.init(255, 203, 0, 255)    # Gold
+  ORANGE     = Color.init(255, 161, 0, 255)    # Orange
+  PINK       = Color.init(255, 109, 194, 255)  # Pink
+  RED        = Color.init(230, 41, 55, 255)    # Red
+  MAROON     = Color.init(190, 33, 55, 255)    # Maroon
+  GREEN      = Color.init(0, 228, 48, 255)     # Green
+  LIME       = Color.init(0, 158, 47, 255)     # Lime
+  DARKGREEN  = Color.init(0, 117, 44, 255)     # Dark Green
+  SKYBLUE    = Color.init(102, 191, 255, 255)  # Sky Blue
+  BLUE       = Color.init(0, 121, 241, 255)    # Blue
+  DARKBLUE   = Color.init(0, 82, 172, 255)     # Dark Blue
+  PURPLE     = Color.init(200, 122, 255, 255)  # Purple
+  VIOLET     = Color.init(135, 60, 190, 255)   # Violet
+  DARKPURPLE = Color.init(112, 31, 126, 255)   # Dark Purple
+  BEIGE      = Color.init(211, 176, 131, 255)  # Beige
+  BROWN      = Color.init(127, 106, 79, 255)   # Brown
+  DARKBROWN  = Color.init(76, 63, 47, 255)     # Dark Brown
+
+  WHITE      = Color.init(255, 255, 255, 255)  # White
+  BLACK      = Color.init(0, 0, 0, 255)        # Black
+  BLANK      = Color.init(0, 0, 0, 0)          # Transparent
+  MAGENTA    = Color.init(255, 0, 255, 255)    # Magenta
+  RAYWHITE   = Color.init(245, 245, 245, 255)  # Ray White  
 
   KEY_Z               = 90
   KEY_RIGHT           = 262
