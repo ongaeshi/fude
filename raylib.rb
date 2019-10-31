@@ -326,7 +326,10 @@ module Raylib
   MAGENTA    = Color.init(255, 0, 255, 255)    # Magenta
   RAYWHITE   = Color.init(245, 245, 245, 255)  # Ray White  
 
+  KEY_SPACE           = 32
+  KEY_P               = 80  
   KEY_Z               = 90
+  
   KEY_RIGHT           = 262
   KEY_LEFT            = 263
   KEY_DOWN            = 264

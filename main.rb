@@ -3,4 +3,5 @@
 # require './core_3d_camera_free'
 # require './core_3d_camera_first_person'
 # require './models_box_collisions'
-require './models_billboard'
+# require './models_billboard'
+require './audio_module_playing'
