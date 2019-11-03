@@ -5,4 +5,5 @@
 # require './models_box_collisions'
 # require './models_billboard'
 # require './audio_module_playing'
-require './textures_background_scrolling'
+# require './textures_background_scrolling'
+require './textures_bunnymark'

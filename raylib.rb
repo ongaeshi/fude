@@ -335,6 +335,11 @@ module Raylib
   KEY_DOWN            = 264
   KEY_UP              = 265
 
+  # Mouse buttons
+  MOUSE_LEFT_BUTTON   = 0
+  MOUSE_RIGHT_BUTTON  = 1
+  MOUSE_MIDDLE_BUTTON = 2
+
   def window(x, y, title)
     init_window(x, y, title)
     yield
