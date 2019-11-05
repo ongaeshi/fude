@@ -22,6 +22,14 @@ class TexturesBunnymarkScene
   def initialize
     @texBunny = load_texture("resources/wabbit_alpha.png")
     @bunnies = []
+    0.upto(MAX_BUNNIES) do |e|
+      b = Bunny.new
+      b.position = Vector2.new
+      b.speed = Vector2.new
+      b.color = Color.new
+      @bunnies.push b
+    end
+    @bunniesCount = 0
 
     set_target_fps(60)               # Set our game to run at 60 frames-per-second
   end
@@ -30,26 +38,25 @@ class TexturesBunnymarkScene
     if is_mouse_button_down(MOUSE_LEFT_BUTTON)
       # Create more bunnies
       0.upto(99) do
-        if @bunnies.count < MAX_BUNNIES
-          b = Bunny.new
-          b.position = get_mouse_position
-          b.speed = Vector2.init(
-            get_random_value(-250, 250)/60.0,
-            get_random_value(-250, 250)/60.0
-            )
-          b.color = Color.init(
-            get_random_value(50, 240),
-            get_random_value(80, 240),
-            get_random_value(100, 240), 
-            255
-            )
-          @bunnies.push(b)
+        if @bunniesCount < MAX_BUNNIES
+          b = @bunnies[@bunniesCount]
+          m = get_mouse_position
+          b.position.x = m.x
+          b.position.y = m.y
+          b.speed.x = get_random_value(-250, 250)/60.0
+          b.speed.y = get_random_value(-250, 250)/60.0
+          b.color.r = get_random_value(50, 240)
+          b.color.g = get_random_value(80, 240)
+          b.color.b = get_random_value(100, 240)
+          b.color.a = 255
+          @bunniesCount += 1
         end
       end
     end
 
     # Update bunnies
-    @bunnies.each do |e|
+    0.upto(@bunniesCount-1) do |i|
+      e = @bunnies[i]
       e.position.x += e.speed.x
       e.position.y += e.speed.y
 
@@ -68,7 +75,8 @@ class TexturesBunnymarkScene
   def draw
     clear_background(RAYWHITE);
 
-    @bunnies.each do |e|
+    0.upto(@bunniesCount-1) do |i|
+      e = @bunnies[i]
       # NOTE: When internal batch buffer limit is reached (MAX_BATCH_ELEMENTS),
       # a draw call is launched and buffer starts being filled again;
       # before issuing a draw call, updated vertex data from internal CPU buffer is send to GPU...
@@ -79,8 +87,8 @@ class TexturesBunnymarkScene
     end
 
     draw_rectangle(0, 0, SCREEN_WIDTH, 40, BLACK)
-    draw_text("bunnies: #{@bunnies.count}", 120, 10, 20, GREEN)
-    draw_text("batched draw calls: #{1 + @bunnies.count/MAX_BATCH_ELEMENTS}", 320, 10, 20, MAROON)
+    draw_text("bunnies: #{@bunniesCount}", 120, 10, 20, GREEN)
+    draw_text("batched draw calls: #{(1 + @bunniesCount/MAX_BATCH_ELEMENTS).to_i}", 320, 10, 20, MAROON)
 
     draw_fps(10, 10);
   end
