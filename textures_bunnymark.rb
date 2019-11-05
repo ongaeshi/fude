@@ -37,7 +37,7 @@ class TexturesBunnymarkScene
   def update
     if is_mouse_button_down(MOUSE_LEFT_BUTTON)
       # Create more bunnies
-      0.upto(99) do
+      0.upto(5) do
         if @bunniesCount < MAX_BUNNIES
           b = @bunnies[@bunniesCount]
           m = get_mouse_position
