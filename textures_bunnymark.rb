@@ -54,6 +54,10 @@ class TexturesBunnymarkScene
       end
     end
 
+    if is_mouse_button_down(MOUSE_RIGHT_BUTTON)
+      @bunniesCount = 0
+    end
+
     # Update bunnies
     0.upto(@bunniesCount-1) do |i|
       e = @bunnies[i]
