@@ -327,7 +327,10 @@ module Raylib
   RAYWHITE   = Color.init(245, 245, 245, 255)  # Ray White  
 
   KEY_SPACE           = 32
+  KEY_A               = 65
   KEY_P               = 80  
+  KEY_R               = 82
+  KEY_S               = 83
   KEY_Z               = 90
   
   KEY_RIGHT           = 262
