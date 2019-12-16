@@ -360,5 +360,11 @@ module Raylib
 	  yield
 	  end_mode3d
   end
+
+  def mode2d(camera)
+    begin_mode2d(camera)
+	  yield
+	  end_mode2d
+  end
 end
 
