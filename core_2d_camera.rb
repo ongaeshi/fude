@@ -29,7 +29,7 @@ window(SCREEN_WIDTH, SCREEN_HEIGHT, WINDOW_TITLE) do
 
   camera = Camera2D.new
   camera.target = Vector2.init(player.x + 20, player.y + 20)
-  camera.offset = Vector2.init(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+  camera.offset = Vector2.init(0, 0)
   camera.rotation = 0.0
   camera.zoom = 1.0
 
@@ -40,8 +40,14 @@ window(SCREEN_WIDTH, SCREEN_HEIGHT, WINDOW_TITLE) do
     # Player movement
     if is_key_down(KEY_RIGHT)
       player.x += 2
+      o = camera.offset
+      o.x -= 2
+      camera.offset = o
     elsif is_key_down(KEY_LEFT)
       player.x -= 2
+      o = camera.offset
+      o.x += 2
+      camera.offset = o
     end
 
     # Camera target follows player
