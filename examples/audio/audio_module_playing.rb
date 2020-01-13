@@ -1,5 +1,5 @@
 # raylib [audio] example - Module playing (streaming)
-require './raylib'
+require "../../raylib"
 include Raylib
 
 MAX_CIRCLES = 64

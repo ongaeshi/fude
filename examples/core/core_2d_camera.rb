@@ -1,5 +1,5 @@
 # raylib [core] example - 2d camera
-require "./raylib"
+require "../../raylib"
 include Raylib
 
 WINDOW_TITLE = "raylib [core] example - 2d camera"

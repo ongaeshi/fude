@@ -1,5 +1,5 @@
 # raylib [textures] example - Background scrolling
-require './raylib'
+require "../../raylib"
 include Raylib
 
 WINDOW_TITLE = "raylib [textures] example - @background scrolling"

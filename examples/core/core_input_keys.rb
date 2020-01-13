@@ -1,5 +1,5 @@
 # raylib [core] example - Keyboard input
-require './raylib'
+require "../../raylib"
 include Raylib
 
 SCREEN_WIDTH = 800

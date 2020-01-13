@@ -1,5 +1,5 @@
 # raylib [models] example - Detect basic 3d collisions (box vs sphere vs box)
-require './raylib'
+require "../../raylib"
 include Raylib
 
 # Initialization

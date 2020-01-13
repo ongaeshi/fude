@@ -1,5 +1,5 @@
 # raylib [models] example - Drawing billboards
-require "./raylib"
+require "../../raylib"
 include Raylib
 
 # Initialization

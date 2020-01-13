@@ -1,5 +1,5 @@
 # raylib [core] example - 3d camera first person
-require './raylib'
+require "../../raylib"
 include Raylib
 
 MAX_COLUMNS = 20

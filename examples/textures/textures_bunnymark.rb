@@ -1,5 +1,5 @@
 # raylib [textures] example - Bunnymark
-require './raylib'
+require "../../raylib"
 include Raylib
 
 WINDOW_TITLE = "raylib [textures] example - bunnymark"

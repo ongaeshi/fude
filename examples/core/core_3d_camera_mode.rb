@@ -1,5 +1,5 @@
 # raylib [core] example - Initialize 3d camera mode
-require "./raylib"
+require "../../raylib"
 include Raylib
 
 # Initialization
