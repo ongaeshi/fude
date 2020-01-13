@@ -351,6 +351,28 @@ module Raylib
   MOUSE_RIGHT_BUTTON = 1
   MOUSE_MIDDLE_BUTTON = 2
 
+  # System config flags
+  # NOTE: Used for bit masks
+  FLAG_RESERVED = 1     # Reserved
+  FLAG_FULLSCREEN_MODE = 2     # Set to run program in fullscreen
+  FLAG_WINDOW_RESIZABLE = 4     # Set to allow resizable window
+  FLAG_WINDOW_UNDECORATED = 8     # Set to disable window decoration (frame and buttons)
+  FLAG_WINDOW_TRANSPARENT = 16    # Set to allow transparent window
+  FLAG_WINDOW_HIDDEN = 128   # Set to create the window initially hidden
+  FLAG_WINDOW_ALWAYS_RUN = 256   # Set to allow windows running while minimized
+  FLAG_MSAA_4X_HINT = 32    # Set to try enabling MSAA 4X
+  FLAG_VSYNC_HINT = 64    # Set to try enabling V-Sync on GPU
+
+  # Texture parameters: filter mode
+  # NOTE 1: Filtering considers mipmaps if available in the texture
+  # NOTE 2: Filter is accordingly set for minification and magnification
+  FILTER_POINT = 0                  # No filter, just pixel aproximation
+  FILTER_BILINEAR = 1               # Linear filtering
+  FILTER_TRILINEAR = 2              # Trilinear filtering (linear with mipmaps)
+  FILTER_ANISOTROPIC_4X = 3         # Anisotropic filtering 4x
+  FILTER_ANISOTROPIC_8X = 4         # Anisotropic filtering 8x
+  FILTER_ANISOTROPIC_16X = 5        # Anisotropic filtering 16x
+
   def window(x, y, title)
     init_window(x, y, title)
     yield
@@ -373,5 +395,11 @@ module Raylib
     begin_mode2d(camera)
     yield
     end_mode2d
+  end
+
+  def texture_mode(target)
+    begin_texture_mode(target)
+    yield
+    end_texture_mode
   end
 end
