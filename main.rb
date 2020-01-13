@@ -1,9 +1,20 @@
-require './core_basic_window'
-require './core_input_keys'
-require './core_3d_camera_free'
-require './core_3d_camera_first_person'
-require './models_box_collisions'
-require './models_billboard'
-require './audio_module_playing'
-require './textures_background_scrolling'
-require './textures_bunnymark'
+require './raylib'
+include Raylib
+
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 450
+
+window(SCREEN_WIDTH, SCREEN_HEIGHT, "fude") do
+	set_target_fps(60)
+
+	until window_should_close do
+		# Update
+		# TODO: Update your variables here
+
+		# Draw
+		draw do
+			clear_background(RAYWHITE)
+			draw_text("Hello, World!", 190, 200, 20, LIGHTGRAY);
+		end
+	end
+end
